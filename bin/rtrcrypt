@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby20
+
+require 'router_crypt'
+
+begin
+  p RouterCrypt::CLI.run
+rescue => e
+  warn "ERROR: #{e}"
+end
