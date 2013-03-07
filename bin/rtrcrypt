@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby20
+#!/usr/bin/env ruby
 
 require 'router_crypt'
 
