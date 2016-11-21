@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'router_crypt'
+require_relative '../lib/router_crypt'
 
 begin
   p RouterCrypt::CLI.run
 rescue => e
   warn "ERROR: #{e}"
+  raise
 end
