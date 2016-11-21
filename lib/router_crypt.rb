@@ -1,10 +1,11 @@
 class RouterCrypt
 end
 
-require 'junos/common'
-require 'junos/decrypt'
-require 'ios/common'
-require 'ios/decrypt'
-require 'nxos/common'
-require 'nxos/decrypt'
-require 'cli/cli'
+require_relative 'junos/common'
+require_relative 'junos/decrypt'
+require_relative 'junos/crypt'
+require_relative 'ios/common'
+require_relative 'ios/decrypt'
+require_relative 'nxos/common'
+require_relative 'nxos/decrypt'
+require_relative 'cli/cli'
