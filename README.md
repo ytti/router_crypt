@@ -3,7 +3,7 @@ router_crypt
 
 About
 -----
-Ruby library and executable to (de)crypt various router vendors (JunOS, IOS, NXOS) password. As of now, only decrypt is implemented
+Ruby library and executable to (de)crypt various router vendors (JunOS, IOS, NXOS) password.
 
 
 Installation
@@ -18,11 +18,13 @@ rtrcrypt [encrypted password]
 
 Library usage
 -------------
+```
 require 'router_crypt'
 
 RouterCrypt::IOS.decrypt ios_pw
 RouterCrypt::NXOS.decrypt nxos_pw
 RouterCrypt::JunOS.decrypt junos_pw
+```
 
 
 Thanks
