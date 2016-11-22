@@ -5,6 +5,6 @@ describe RouterCrypt::JunOS, '#crypt' do
   it 'returns correct crypted password' do
     crypt = RouterCrypt::JunOS.crypt CLEAR
     clear = RouterCrypt::JunOS.decrypt crypt
-    clear.should eq CLEAR
+    expect(clear).to eq CLEAR
   end
 end

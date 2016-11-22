@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = 'router_crypt'
-  s.version           = '0.3.1'
+  s.version           = '0.4.0'
   s.platform          = Gem::Platform::RUBY
   s.authors           = [ 'Saku Ytti' ]
   s.email             = %w( saku@ytti.fi )
