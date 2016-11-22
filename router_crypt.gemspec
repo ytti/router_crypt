@@ -12,4 +12,7 @@ Gem::Specification.new do |s|
   s.executables       = %w( rtrcrypt )
   s.require_path      = 'lib'
   s.required_rubygems_version = '>= 1.3.6'
+  s.add_runtime_dependency 'slop', '~> 4.4'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec'
 end

@@ -6,5 +6,5 @@ begin
   p RouterCrypt::CLI.run
 rescue => e
   warn "ERROR: #{e}"
-  raise
+  #raise
 end

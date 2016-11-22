@@ -14,17 +14,15 @@ class RouterCrypt::JunOS
 
       rand=randc(EXTRA[salt])
 
-      pos = 0
       prev = salt
       crypt="$9$"
       crypt<<salt
       crypt<<rand
 
-      for p in (plaintext.split(''))
+      plaintext.chars.each_with_index do |p, pos|
         encode = ENCODE[ pos % ENCODE.length]
         crypt<< gap_encode(p, prev, encode)
         prev = crypt[crypt.size-1]
-        pos+=1
       end
 
       crypt
