@@ -31,11 +31,11 @@ class RouterCrypt::CLI
 
     def opts_parse
       Slop.parse do |o|
-        o.bool '-D', '--debug', 'turn on debugging'
-        o.on   '-h', '--help' do puts o; exit; end
-        o.string  '-j','--junipercrypt', 'crypt Juniper'
-        o.string  '-s','--salt', 'salt for crypt'
-	o.string  '-d','--decrypt', 'decrypt'
+        o.on     '-h', '--help' do puts o; exit; end
+        o.bool   '-D', '--debug',        'turn on debugging'
+        o.string '-j', '--junipercrypt', 'crypt Juniper'
+        o.string '-s', '--salt',         'salt for crypt'
+	o.string '-d', '--decrypt',      'decrypt'
       end
     end
 

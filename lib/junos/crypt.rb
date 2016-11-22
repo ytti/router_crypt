@@ -6,13 +6,8 @@ class RouterCrypt::JunOS
     # @param [String] the plaintext string
     # @return [String] the encrypted string
     def crypt (plaintext, *opts)
-      if opts[0] != nil
-        salt=opts[0]
-      else
-        salt=randc(1)
-      end
-
-      rand=randc(EXTRA[salt])
+      salt = opts[0] ? opts[0][0] : randc(1)
+      rand = randc(EXTRA[salt])
 
       prev = salt
       crypt="$9$"
@@ -26,7 +21,6 @@ class RouterCrypt::JunOS
       end
 
       crypt
-
     end
   end
 end
