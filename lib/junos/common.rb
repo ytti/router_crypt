@@ -26,7 +26,7 @@ class RouterCrypt::JunOS
     private
 
     def nibble str, len
-      nib, str[0..len-1] = str[0..len-1], ''
+      nib, str[0,len] = str[0,len], ''
       nib.size == len or raise InvalidPW, 'Insufficent amont of characters'
       nib
     end
