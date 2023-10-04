@@ -7,7 +7,7 @@ class RouterCrypt::IOS
     def decrypt e_pw
       index = e_pw.slice!(0..1).to_i-1
       e_pw.scan(/../).inject("") do |d_pw, byte|
-        index += 1 % KEY.size
+        index = (index+1) % KEY.size
         d_pw + (byte.hex ^ KEY[index]).chr
       end
     end
